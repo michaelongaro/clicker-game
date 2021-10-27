@@ -6,8 +6,13 @@ window.onload = ()=> {
     let initTimer = true;
 
     square.addEventListener("click", ()=>{
-
-        timeDiff = end() //ends timer and saves value to timeDiff
+        if (initTimer) {
+            timeDiff = 3000
+            initTimer = false
+        }
+        else {
+            timeDiff = end() //ends timer and saves value to timeDiff
+        }
         start()  //restarts timer
 
         let far_enough_away = false
@@ -43,6 +48,10 @@ window.onload = ()=> {
         // console.log(bounded_randy);
         console.log(timeDiff);
 
+        if (timeDiff > 5000) {
+            timeDiff = 5750
+        }
+
         anime({
             targets: '#square',
             translateX: bounded_randx,
@@ -68,11 +77,6 @@ window.onload = ()=> {
     }
 
     function end() {
-        if (initTimer) {
-            initTimer = false;
-            return
-        }
-
         endTime = performance.now();
         return endTime - startTime;
     }
