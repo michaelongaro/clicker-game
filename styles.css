@@ -1,5 +1,60 @@
+@font-face {
+    font-family: 'momcake-bold';
+    src: url('/fonts/MomcakeBold-WyonA.otf');
+}
+
 #square {
+    display: none;
     height: 100px;
     width: 100px;
     background-color: red;
 }
+
+#counter {
+    display: none;
+    position:absolute;
+    top:1rem;
+    right:1rem;
+    font-size: 40pt;
+    font-family: "momcake-bold";
+}
+
+#start-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    min-height: 100vh;
+}
+
+#start-box {
+    padding: 150px;
+    border-radius: 20px;
+    border-color: orange;
+    background-color: rgba(51,185,131,.5);
+    font-size: 40pt;
+    font-family: "momcake-bold";
+
+}
+
+#score {
+    display: none;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 20px;
+    border-color: rgba(51, 185, 131, .5);
+    background-color: orange;
+    font-size: 20pt;
+    font-family: "momcake-bold";
+}
+
+#start-box:hover {
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+#start-box:active:hover {
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, .2);
+}
+
+
+
